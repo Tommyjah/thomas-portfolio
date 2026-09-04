@@ -3,7 +3,7 @@ import "./globals.css";
 
 /* 🔁 Change this to your real domain once you have it
    (works with your Vercel URL in the meantime) */
-const siteUrl = "https://thomas-portfolio-coral.vercel.app";
+const siteUrl = "https://thomas.pro.et";
 
 
 export const metadata: Metadata = {
