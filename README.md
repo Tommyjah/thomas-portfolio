@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thomas Debebe — Portfolio Website & Next.js Template
 
-## Getting Started
+> A premium, modern **portfolio website** for a **Full-Stack Developer & AI Product Builder**. Dark & light themes, flip-card projects, animated skill bars, typing hero, and a luxury credentials section. Clean, fast, responsive — and easily reusable as a **developer portfolio template**.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js%2016-black?logo=next.js&style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&style=flat-square)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38bdf8?logo=tailwindcss&style=flat-square)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?logo=vercel&style=flat-square)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
+**Live demo:** your-vercel-url.vercel.app — **Portfolio for: AI developer, full-stack engineer, machine learning engineer, data analyst** — built for recruiters, freelance clients, and job applications.
+
+---
+
+## ✨ Features
+
+- 🌗 **Dark mode / light mode** with one-click toggle, persisted in `localStorage`
+- ⌨️ **Animated typing hero** that cycles through roles & specialties
+- 🃏 **3D flip-card projects** — hover to flip: image, stack & status on the front; full description + live link on the back
+- 📊 **Animated skill bars** — fill to percentage on scroll (Next.js, React, TypeScript, Python, AI/ML, Supabase, cloud)
+- 🏅 **Verified credentials list** — numbered badges with real verification links
+- 🧠 **Soft skills & virtual experience** section (Forage: EA, Deloitte, Accenture)
+- ✨ **Particle background + ambient glow** animations
+- 🎨 **Glassmorphism cards**, gradient accents, smooth scroll-reveal animations
+- 📱 **100% responsive** — hamburger mobile menu, mobile-first breakpoints
+- 🚀 **Blazing fast** — zero heavy runtime dependencies, inline SVG icons, App Router + Turbopack
+
+## 🛠 Built With
+
+| Purpose | Technology |
+|---|---|
+| Framework | [Next.js 16](https://nextjs.org) (App Router) |
+| Language | [TypeScript](https://www.typescriptlang.org) |
+| Styling | [Tailwind CSS](https://tailwindcss.com) + custom CSS variables |
+| Animations | Pure CSS (keyframes) + IntersectionObserver scroll reveals |
+| Hosting | [Vercel](https://vercel.com) — auto-deploy from GitHub |
+
+**Why this stack?** Next.js gives SEO-ready server rendering and one-command Vercel deploys; Tailwind keeps styling instant and consistent; zero extra dependencies means it installs and builds in seconds.
+
+## 🚀 Getting Started
 
 ```bash
+# clone or download, then:
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Production build:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build && npm start
+```
 
-## Learn More
+## 📂 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── public/
+│   └── profile.jpg         # ← replace with your photo
+└── src/app/
+    ├── layout.tsx          # root layout + SEO metadata
+    ├── globals.css         # themes, animations, all styles (CSS variables)
+    └── page.tsx            # the whole portfolio in one file
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Customize in Minutes (Template Mode)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All content is plain data arrays at the top of `src/app/page.tsx`:
 
-## Deploy on Vercel
+| What to change | Array to edit |
+|---|---|
+| Name, roles, hero text | `phrases`, hero JSX |
+| Projects | `projects` (title, description, tech, link, image, metrics) |
+| Skills & levels | `skillGroups` |
+| Experience | `experience` |
+| Certifications | `certifications` |
+| Soft skills & Forage | `softSkills`, `virtualExperiences` |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Theme colors (accent, background, text) are **CSS variables** in `src/app/globals.css` — change `--accent` once and the whole site updates.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ☁️ Deploy to Vercel (Free)
+
+1. Push this repo to GitHub
+2. Import it at [vercel.com/new](https://vercel.com/new)
+3. Done — every `git push` auto-redeploys
+
+## 📬 Connect with Me
+
+- **LinkedIn:** [linkedin.com/in/thomas-debebe](https://linkedin.com/in/thomas-debebe)
+- **GitHub:** [github.com/Tommyjah](https://github.com/Tommyjah)
+- **Email:** tomiti2552@gmail.com
+- **Location:** Addis Ababa, Ethiopia (open to remote)
+
+## 📄 License
+
+MIT — free to use, remix, and sell. A credit link back is appreciated 🤝
+
+---
+
+**Keywords:** Next.js portfolio · developer portfolio template · React portfolio website · TypeScript portfolio · Tailwind portfolio · AI developer portfolio · full-stack developer resume website · personal website template · dark mode portfolio · responsive portfolio · Vercel deploy
