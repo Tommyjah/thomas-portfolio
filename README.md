@@ -8,7 +8,7 @@
 ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?logo=vercel&style=flat-square)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-**Live demo:** your-vercel-url.vercel.app — **Portfolio for: AI developer, full-stack engineer, machine learning engineer, data analyst** — built for recruiters, freelance clients, and job applications.
+**Live demo:** thomas-portfolio-coral.vercel.app — **Portfolio for: AI developer, full-stack engineer, machine learning engineer, data analyst** — built for recruiters, freelance clients, and job applications.
 
 ---
 
