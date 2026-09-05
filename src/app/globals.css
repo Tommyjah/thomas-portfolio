@@ -1330,3 +1330,186 @@ img { max-width: 100%; display: block; }
     display: none;
   }
 }
+/* ── Book a Call CTA ── */
+.book-call {
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 48px 32px;
+  margin-bottom: 56px;
+  position: relative;
+  overflow: hidden;
+}
+.book-call::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 70%; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--accent-secondary), transparent);
+  border-radius: 3px;
+}
+.book-call-icon {
+  width: 64px; height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--accent-glow), rgba(168, 85, 247, 0.15));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+.book-call h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 12px;
+}
+.book-call p {
+  color: var(--text);
+  max-width: 480px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+}
+.book-call .btn {
+  display: inline-flex;
+}
+
+/* ── Announcement Bar ── */
+.announcement-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+  z-index: 1001;
+  overflow: hidden;
+}
+.announcement-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.announcement-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  animation: dotPulse 1.6s ease-in-out infinite;
+}
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+.announcement-link {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  margin-left: 6px;
+  transition: opacity 0.3s;
+}
+.announcement-link:hover { opacity: 0.85; }
+
+/* Push the fixed nav down below the banner */
+.nav { top: 38px; }
+
+/* Mobile: dropdown menu must clear nav (38px) + bar (70px) */
+@media (max-width: 768px) {
+  .nav-links { top: 108px; }
+}
+@media (max-width: 480px) {
+  .announcement-text { font-size: 0.7rem; gap: 6px; }
+}
+
+/* Bonus: anchor scrolls stop below the taller fixed header */
+section[id] { scroll-margin-top: 120px; }
+
+/* ── Cover Band (cinematic, both themes) ── */
+.cover-band {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 110px 24px;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* The photo itself, brightened for punch */
+.cover-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(1.25) contrast(1.05) saturate(1.2);
+}
+
+/* Dark scrim — identical in dark AND light theme for readability */
+.cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 6, 14, 0.78) 0%,
+    rgba(6, 6, 14, 0.35) 50%,
+    rgba(6, 6, 14, 0.85) 100%
+  );
+}
+
+.cover-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Force readable colors inside the band in BOTH themes */
+.cover-label {
+  color: #a5b4fc !important;   /* light indigo — pops on dark */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.cover-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ffffff !important;   /* white in both themes */
+  margin-bottom: 16px;
+}
+.cover-sub {
+  color: #e2e8f0 !important;   /* near-white in both themes */
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* "Addis Ababa" gradient stays vivid on dark */
+.cover-band .gradient-text {
+  text-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .cover-band {
+    min-height: 340px;
+    padding: 80px 20px;
+  }
+  .cover-band::before {
+    background-attachment: scroll; /* iOS-safe */
+  }
+  .cover-title { font-size: 1.8rem; }
+}

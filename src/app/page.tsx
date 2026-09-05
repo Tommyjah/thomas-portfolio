@@ -385,7 +385,21 @@ export default function Portfolio() {
   }, []);
 
   return (
+    
     <>
+    
+          {/* Announcement Bar */}
+      <div className="announcement-bar">
+        <p className="announcement-text">
+          <span className="announcement-dot" />
+          Open to freelance work &amp; collaborations
+          <a href="#contact" className="announcement-link">
+            Let&apos;s talk &rarr;
+          </a>
+        </p>
+      </div>
+
+
       {/* Background */}
       <div className="bg-glow" />
       <div className="particles">
@@ -490,6 +504,16 @@ export default function Portfolio() {
   </svg>
   Download CV
 </a>
+
+<a
+  href="https://cal.com/15-min-intro-call-discoverycall"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn btn-outline"
+>
+  Book a Call
+</a>
+
 
               </div>
             </div>
@@ -684,6 +708,22 @@ export default function Portfolio() {
         </div>
       </section>
 
+            {/* Cover Band */}
+      <section className="cover-band">
+        <div className="cover-overlay" />
+        <div className="cover-content reveal">
+          <p className="cover-label">Building for Africa &amp; Beyond</p>
+          <h2 className="cover-title">
+            From <span className="gradient-text">Addis Ababa</span> to the World
+          </h2>
+          <p className="cover-sub">
+            Full-stack engineering + AI, turned into deployed products
+            that solve real problems.
+          </p>
+        </div>
+      </section>
+
+
       {/* Experience */}
       <section className="section" id="experience">
         <div className="container">
@@ -848,6 +888,33 @@ export default function Portfolio() {
               Open to freelance projects, collaborations and full-time opportunities
             </p>
           </div>
+
+          {/* Book a Call CTA */}
+<div className="book-call reveal">
+  <div className="book-call-icon">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="4" width="18" height="18" rx="2" />
+      <path d="M16 2v4M8 2v4M3 10h18" />
+    </svg>
+  </div>
+  <h3>Prefer to talk it through?</h3>
+  <p>
+    Book a free 15-minute intro call and let&apos;s discuss your project,
+    idea, or opportunity — no commitment.
+  </p>
+  <a
+    href="https://cal.com/15-min-intro-call-discoverycall"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-primary"
+  >
+    Book a Call
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+    </svg>
+  </a>
+</div>
+
           <div className="contact-grid">
             <div className="contact-info">
               <div className="contact-item reveal">
