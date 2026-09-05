@@ -190,30 +190,33 @@ const languages = ["🌍 Amharic — Native", "🗣 English — Full Professiona
 const virtualExperiences = [
   {
     company: "Electronic Arts",
-    logo: "EA",
+    logo: "🎮",
+    logoUrl: "https://cdn.simpleicons.org/ea",
     role: "Product Management Job Simulation",
     date: "Jul 2025",
     desc: "Stepped into an EA product role — defined KPIs, analyzed player-focused data and made product decisions the way real EA teams do.",
     skills: ["KPI Strategy", "Product Management", "Data-Driven Decisions"],
-    link: "https://www.linkedin.com/in/thomas-debebe-1447542a2/details/certifications/",
+    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/j43dGscQHtJJ57N54/5genWYpfo5b57G7yv_j43dGscQHtJJ57N54_QjhiMTjCjDYyu5v53_1753791186194_completion_certificate.pdf",
   },
   {
     company: "Deloitte Australia",
-    logo: "D",
+    logo: "🎮",
+    logoUrl: "https://www.google.com/s2/favicons?domain=deloitte.com&sz=128",
     role: "Data Analytics Job Simulation",
     date: "Jul 2025",
     desc: "Completed a real consulting-style analytics task: prepared, cleaned and analyzed data in Excel to deliver client-ready insights.",
     skills: ["Microsoft Excel", "Data Cleaning", "Reporting"],
-    link: "https://www.linkedin.com/in/thomas-debebe-1447542a2/details/certifications/",
+    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_QjhiMTjCjDYyu5v53_1753481748459_completion_certificate.pdf",
   },
   {
     company: "Accenture UK",
-    logo: "A",
+    logo: "🎮",
+    logoUrl: "https://www.google.com/s2/favicons?domain=accenture.com&sz=128",
     role: "Technology Apprenticeship Simulation",
     date: "Jul 2025",
     desc: "Explored the technology consulting lifecycle — analyzing business needs and presenting solutions in an apprenticeship context.",
     skills: ["Data Analysis", "Tech Consulting", "Presentation"],
-    link: "https://www.linkedin.com/in/thomas-debebe-1447542a2/details/certifications/",
+    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ovyvuqqNRQKBjNxbj/EzKFRQ2oEA87PPjsL_ovyvuqqNRQKBjNxbj_QjhiMTjCjDYyu5v53_1753365930240_completion_certificate.pdf",
   },
 ];
 
@@ -509,7 +512,7 @@ export default function Portfolio() {
   href="https://cal.com/15-min-intro-call-discoverycall"
   target="_blank"
   rel="noopener noreferrer"
-  className="btn btn-outline"
+  className="btn btn-neon"
 >
   Book a Call
 </a>
@@ -786,7 +789,17 @@ export default function Portfolio() {
               <div className="virtual-list">
                 {virtualExperiences.map((v) => (
                   <div className="virtual-card" key={v.company}>
-                    <div className="v-logo">{v.logo}</div>
+                    <div className="vx-logo">
+  <img
+    src={v.logoUrl}
+    alt={`${v.company} logo`}
+    loading="lazy"
+    onError={(e) => {
+      (e.target as HTMLImageElement).style.display = "none";
+    }}
+  />
+</div>
+
                     <div>
                       <p className="v-role">{v.role}</p>
                       <p className="v-company">
@@ -906,7 +919,7 @@ export default function Portfolio() {
     href="https://cal.com/15-min-intro-call-discoverycall"
     target="_blank"
     rel="noopener noreferrer"
-    className="btn btn-primary"
+    className="btn btn-neon"
   >
     Book a Call
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

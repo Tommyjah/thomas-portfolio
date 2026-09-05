@@ -1513,3 +1513,37 @@ section[id] { scroll-margin-top: 120px; }
   }
   .cover-title { font-size: 1.8rem; }
 }
+
+/* ── Virtual Experience Logos ── */
+.vx-logo {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: #fff;               /* white chip — logos stay visible on dark theme */
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+.vx-logo img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+}
+
+
+/* ── Futuristic Neon Green Button ── */
+.btn-neon {
+  background: linear-gradient(135deg, #00ff87, #00d68f);
+  background: linear-gradient(135deg, #00ff87, #00c853);
+  color: #04120a;            /* near-black text = best contrast on neon */
+  border: 1px solid rgba(0, 255, 150, 0.5);
+  box-shadow: 0 0 18px rgba(0, 255, 135, 0.35), 0 4px 22px rgba(0, 200, 83, 0.3);
+  text-shadow: none;
+}
+.btn-neon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 34px rgba(0, 255, 135, 0.6), 0 8px 32px rgba(0, 200, 83, 0.4);
+  background: linear-gradient(135deg, #2aff9c, #00e676);
+}
