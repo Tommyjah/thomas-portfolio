@@ -18,7 +18,7 @@ const projects = [
     description:
       "Live trading-analysis application that turns market information into structured analytical insights and an interactive decision-support workflow.",
     tech: ["Streamlit", "Python", "AI"],
-    link: "#",
+    link: "https://quantorapro.streamlit.app/",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
     metrics: [
       { label: "Live", color: "green" },
@@ -48,7 +48,7 @@ const projects = [
     description:
       "Secure workflow system for submitting, managing and approving change requests with structured business processes.",
     tech: ["Next.js", "Supabase", "TypeScript"],
-    link: "#",
+    link: "https://crms-neon.vercel.app",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     metrics: [
       { label: "Internal Tool", color: "" },
@@ -93,7 +93,7 @@ const projects = [
     description:
       "AI career coach helping beginners explore tech career paths and build personalized learning plans.",
     tech: ["PartyRock", "AI", "No-code"],
-    link: "#",
+    link: "https://partyrock.aws/u/tomiti/geUHQR6vg/Talenta-AI-Career-Coach",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
     metrics: [
       { label: "AI Powered", color: "" },

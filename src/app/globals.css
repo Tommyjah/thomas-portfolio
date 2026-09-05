@@ -1305,3 +1305,28 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
   }
 }
+/* paste at the end of globals.css */
+@media (max-width: 768px) {
+  .nav {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: #0a0a16; /* solid dark — matches your theme */
+  }
+  [data-theme="light"] .nav {
+    background: #ffffff;
+  }
+}
+@media (max-width: 768px) {
+  .gradient-text,
+  .profile-ring,
+  .profile-glow {
+    animation: none;
+  }
+  .bg-glow::before,
+  .bg-glow::after {
+    animation: none;
+  }
+  .particles {
+    display: none;
+  }
+}
