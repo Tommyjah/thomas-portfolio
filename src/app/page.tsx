@@ -18,7 +18,7 @@ const projects = [
     description:
       "Live trading-analysis application that turns market information into structured analytical insights and an interactive decision-support workflow.",
     tech: ["Streamlit", "Python", "AI"],
-    link: "https://quantorapro.streamlit.app/",
+    link: "quantorapro.streamlit.app/",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
     metrics: [
       { label: "Live", color: "green" },
@@ -482,6 +482,15 @@ export default function Portfolio() {
                 <a href="#contact" className="btn btn-outline">
                   Get in Touch
                 </a>
+                <a href="/Thomas-Debebe-CV.pdf" download className="btn btn-download">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
+  Download CV
+</a>
+
               </div>
             </div>
             <div className="hero-image">
