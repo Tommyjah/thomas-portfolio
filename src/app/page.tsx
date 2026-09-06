@@ -10,6 +10,87 @@ const phrases = [
   "Problem Solver for Africa",
 ];
 
+/* ── Case Studies (content) ── */
+const caseStudies: Record<
+  string,
+  { problem: string; approach: string[]; result: string }
+> = {
+  "Ethio Journey": {
+    problem:
+      "Planning travel within Ethiopia is fragmented — travelers juggle separate sites for itineraries, transport and activities, and most options are built only for foreign tourists. Ethio Journey was built to unify premium itineraries, vehicle services and AI-assisted trip planning into one polished product.",
+    approach: [
+      "Designed the full product structure — itineraries, vehicle services and trip planning — with the Ethiopian traveler experience at the center.",
+      "Built a responsive Next.js + TypeScript front end with Tailwind, tuned for speed and mobile-first use.",
+      "Added an AI-assisted trip planning layer, so visitors can describe a trip and get a structured itinerary instead of static pages.",
+      "Shipped to production on Vercel and refined the flow based on real usage.",
+    ],
+    result:
+      "A live, deployed product (ethio-journey.vercel.app) that proves end-to-end delivery — product thinking, UI design, AI features and production deployment — turning a local real-world need into a modern web experience.",
+  },
+  "Quantora-Pro": {
+    problem:
+      "Retail traders drown in raw market data — charts, feeds and numbers that don't tell them what to do next. Quantora-Pro was built to close the gap between noisy information and structured, actionable trading insight.",
+    approach: [
+      "Designed a decision-support workflow that turns market information into clear analytical categories instead of overwhelming users with raw charts.",
+      "Built the analytics layer in Python with Streamlit for fast iteration and live interactivity.",
+      "Wired real-time market data into the AI analysis pipeline so insights update as the market moves.",
+      "Focused the UI on decision prompts — what the data means and what to watch — not just pretty visuals.",
+    ],
+    result:
+      "A live AI trading-analysis app (quantorapro.streamlit.app) demonstrating a full data pipeline — ingestion, AI interpretation and structured output — the kind of tool that shows I can build data products end to end.",
+  },
+  CRMS: {
+    problem:
+      "Organizations track change requests in spreadsheets and email threads, where approvals get lost, versions conflict and nothing is auditable. CRMS was built to give change management a structured, secure home.",
+    approach: [
+      "Modeled the real business process first — submission, review, approval, tracking — so the software mirrors how teams actually work.",
+      "Built a Next.js + TypeScript front end with role-aware flows for submitters and approvers.",
+      "Used Supabase for authentication and a relational data model, keeping records secure and queries fast.",
+      "Designed the approval workflow so every request has a clear status and an audit trail at every step.",
+    ],
+    result:
+      "A deployed internal-tool-grade system (crms-neon.vercel.app) that turns a manual, error-prone process into a structured workflow — proof I can take a real organizational problem and productize it.",
+  },
+  Yelpia: {
+    problem:
+      "Finding good restaurants, hotels and local businesses in Ethiopia means relying on word of mouth — there's no single place to discover, compare and reach local spots. Yelpia was built to fix discovery for Ethiopian businesses and their customers.",
+    approach: [
+      "Researched what locals actually search for — food, lodging, services nearby — and structured Yelpia around that discovery journey.",
+      "Built a responsive Next.js + TypeScript experience with search and location-based filtering at its core.",
+      "Used Supabase to handle business listings, categories and queries so results stay fast as the catalog grows.",
+      "Kept the UI simple and mobile-first, matching how discovery happens in Ethiopia — mostly from a phone.",
+    ],
+    result:
+      "A live local-business discovery product (yelpia.vercel.app) that applies marketplace thinking to a real gap in the Ethiopian market — demonstrating product research, UX design and full-stack delivery.",
+  },
+  Talenta: {
+    problem:
+      "Most learners in Ethiopia can't afford personalized mentorship, and generic course platforms don't adapt to where each person is. Talenta was built to make AI-guided, personalized learning accessible — courses that respond to your goals instead of one-size-fits-all tracks.",
+    approach: [
+      "Framed Talenta around guided learning journeys — pick a career goal and get a personalized path, not just a content library.",
+      "Designed the AI layer to coach and adapt: it recommends courses, tracks progress and adjusts difficulty based on the learner.",
+      "Built the experience with a no-code + Supabase stack to move fast on features while keeping real data storage and user accounts.",
+      "Prioritized modern UX — clean onboarding, clear progress cues and mobile-friendly flows for learners on phones.",
+    ],
+    result:
+      "A live AI learning platform (talenta-aivision-learn.lovable.app) proving I can design product experiences around a real accessibility gap — and that AI features don't require a heavy stack to ship.",
+  },
+  "Talenta Career Coach": {
+    problem:
+      "Beginners entering tech are overwhelmed by the number of paths — web, data, AI, cloud — and have no one to tell them where to start. Talenta Career Coach was built to give newcomers a free, AI-powered guide that maps their interests to a realistic career plan.",
+    approach: [
+      "Started from the beginner's question — 'what should I learn?' — and structured the coach around exploring paths before committing.",
+      "Designed an AI conversation flow that asks about interests and goals, then recommends a fitting tech career path.",
+      "Turned each recommendation into a personalized learning plan, so the advice is actionable, not just a job title.",
+      "Built it on PartyRock/AWS AI tooling to prove the concept fast and keep it free for users to try.",
+    ],
+    result:
+      "A free, working AI career coach (partyrock.aws) that demos my ability to design AI experiences for a non-technical audience — showing product thinking where the user, not the model, stays at the center.",
+  },
+};
+
+
+
 const projects = [
   {
     id: 1,
@@ -22,7 +103,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
     metrics: [
       { label: "Live", color: "green" },
-      { label: "AI Powered", color: "" },
+      { label: "AI Powered", color: "blue" },
       { label: "Real-time", color: "yellow" },
     ],
   },
@@ -148,29 +229,34 @@ const skillGroups = [
 ];
 
 const experience = [
-  {
-    role: "Machine Learning Specialist",
-    company: "Future Interns",
-    period: "Apr 2026 – Present",
-    desc: "Apply machine-learning concepts through practical projects, experimentation and technical problem solving.",
-  },
-  {
-    role: "AI Training Specialist (Amharic)",
-    company: "RWS Group",
-    period: "Apr 2026 – Present",
-    desc: "Contribute to AI training workflows involving Amharic language data and quality-focused model training tasks.",
-  },
-  {
-    role: "Product Engineer",
-    company: "Self-Initiated / Freelance",
-    period: "Feb 2025 – Present",
-    desc: "Design, develop and deploy full-stack and AI-powered products from concept to production, translating real-world needs into usable digital solutions.",
-  },
+  
   {
     role: "IT Technician",
     company: "Bold Endeavor",
-    period: "Jan 2022 – Present",
+    period: "2022 – Present",
     desc: "Provide technical support, troubleshooting, system maintenance and technology-adoption support while contributing to operational and process improvements.",
+  },
+
+  {
+    role: "Product Engineer",
+    company: "Self-Initiated / Freelance",
+    period: "2024 – Present",
+    desc: "Design, develop and deploy full-stack and AI-powered products from concept to production, translating real-world needs into usable digital solutions.",
+  },
+
+  {
+    role: "AI Training Specialist (Amharic)",
+    company: "RWS Group",
+    period: "2026 – Present",
+    desc: "Contribute to AI training workflows involving Amharic language data and quality-focused model training tasks.",
+  },
+  
+  
+{
+    role: "Machine Learning Specialist",
+    company: "Future Interns",
+    period: "Apr 2026 – May 2026",
+    desc: "Apply machine-learning concepts through practical projects, experimentation and technical problem solving.",
   },
 ];
 
@@ -311,11 +397,20 @@ export default function Portfolio() {
   const [deleting, setDeleting] = useState(false);
   const [navScrolled, setNavScrolled] = useState(false);
   const [imgError, setImgError] = useState(false);
+  const [activeCase, setActiveCase] = useState<string | null>(null);
+
   const [particles, setParticles] = useState<
     { id: number; left: string; size: number; duration: number; delay: number }[]
   >([]);
 
   /* ── Theme ── */
+  
+useEffect(() => {
+  document.body.style.overflow = activeCase ? "hidden" : "";
+  return () => { document.body.style.overflow = ""; };
+}, [activeCase]);
+
+  
   useEffect(() => {
     const saved = localStorage.getItem("theme") as "dark" | "light" | null;
     if (saved) setTheme(saved);
@@ -692,6 +787,12 @@ export default function Portfolio() {
                     <h3>{project.title}</h3>
                     <p className="subtitle">{project.subtitle}</p>
                     <p>{project.description}</p>
+                     <button className="btn btn-case" onClick={() => setActiveCase(project.title)}>
+    Case Study
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" />
+    </svg>
+  </button>
                     <a
                       href={project.link}
                       className="btn btn-primary"
@@ -1045,6 +1146,75 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+
+      {/* Case Study Modal */}
+{activeCase &&
+  (() => {
+    const project = projects.find((p) => p.title === activeCase);
+    const cs = caseStudies[activeCase];
+    if (!project || !cs) return null;
+    return (
+      <div className="case-modal" onClick={() => setActiveCase(null)}>
+        <div
+          className="case-modal-card"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            className="case-close"
+            onClick={() => setActiveCase(null)}
+            aria-label="Close case study"
+          >
+            &times;
+          </button>
+          <div className="case-hero">
+            <img src={project.image} alt={project.title} />
+            <div className="case-hero-overlay" />
+            <div className="case-hero-text">
+              <p className="case-label">Case Study</p>
+              <h3>{project.title}</h3>
+              <p>{project.subtitle}</p>
+            </div>
+          </div>
+          <div className="case-body">
+            <div className="case-meta">
+              <span><strong>Stack</strong> {project.tech.join(" · ")}</span>
+              <span>
+                <strong>Status</strong>{" "}
+                {project.metrics.map((m) => m.label).join(" · ")}
+              </span>
+            </div>
+            <h4>The Challenge</h4>
+            <p>{cs.problem}</p>
+            <h4>My Approach</h4>
+            <ul className="case-list">
+              {cs.approach.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ul>
+            <h4>The Result</h4>
+            <p>{cs.result}</p>
+            <div className="case-links">
+              <a
+                href={project.link}
+                className="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Live
+              </a>
+              <button
+                className="btn btn-outline"
+                onClick={() => setActiveCase(null)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  })()}
+
 
       {/* Footer */}
       <footer className="footer">
